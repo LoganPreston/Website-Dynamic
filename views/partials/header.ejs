@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logan's site</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/dropdown.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Logan Preston</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item" id="home"><a href="/">Home</a></li>
+          <li class="nav-item" id="about"><a href="/about">About</a></li>
+          <li class="nav-item" id="contact"><a href="/contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <button onclick="dropdownAction()" class="btn-dropdown">
+              Projects
+            </button>
+            <div id="dropdown-menu" class="dropdown-content">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+

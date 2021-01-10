@@ -1,0 +1,131 @@
+/*off white background and off-black base text*/
+body {
+  background-color: #f1f1e8;
+  color: #444444;
+}
+
+label {
+  padding: 5px;
+}
+
+/*top nav bar*/
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+/*nav bar top left*/
+.navbar-brand {
+  letter-spacing: 5px;
+}
+
+/*general nav bar items*/
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*nav bar hyperlink coloring*/
+.nav-item a {
+  color: #206a5d;
+}
+
+/*nav bar hyperlink coloring*/
+a {
+  color: #206a5d;
+}
+
+/*hover over hyperlinks, navbar and footer*/
+a:hover,
+a:focus {
+  color: #bfdcae;
+}
+
+/*dropdown button default*/
+.btn-dropdown {
+  color: #206a5d;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+/*dropdown button when hover, make look like other hyperlinks*/
+.btn-dropdown:hover,
+.btn-dropdown:focus {
+  text-decoration: underline;
+  color: #bfdcae;
+}
+
+/*  position dropdown li content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1e8;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px 0px rgba(22, 22, 22, 0.25);
+  border-radius: 4px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: #bfdcae;
+  text-decoration: underline;
+  border-radius: 4px;
+}
+
+/* Show the dropdown menu when button clicked */
+.show {
+  display: block;
+}
+
+/*footer section, large banner on bottom*/
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #206a5d;
+  padding: 0px 25px;
+  color: #f1f1e8;
+}
+
+.footer-padding {
+  padding-bottom: 60px;
+}
+
+/*hyperlink coloring in the footer, inverse of top*/
+.footer a {
+  color: #f1f1e8;
+  padding: 0px 25px;
+}
+
+/*general info in footer*/
+.footer p {
+  font-size: 12px;
+  padding: 5px;
+}
+
+/*general button - override bootstrap default color scheme*/
+.btn {
+  background-color: #206a5d;
+}
+
+/*hovering on button*/
+.btn:hover,
+.btn:focus {
+  background-color: #bfdcae;
+  color: #222222;
+}
+
+/* color scheme https://colorhunt.co/palette/201883 206a5d 81b214 bfdcae f1f1e8 */
