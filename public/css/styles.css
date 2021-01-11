@@ -2,6 +2,7 @@
 body {
   background-color: #f1f1e8;
   color: #444444;
+  text-align: center;
 }
 
 label {
@@ -129,3 +130,62 @@ a:focus {
 }
 
 /* color scheme https://colorhunt.co/palette/201883 206a5d 81b214 bfdcae f1f1e8 */
+
+.form-signin {
+  width: 100%;
+  max-width: 1000px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-submit{
+    text-align: left;
+}
+
+.msgContent{
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.msgContact{
+    border-radius: 5px;
+    display:inline;
+    max-width: 470px;  
+}
+
+.topLeft{
+    margin:0px 25px 25px 0px ;
+}
+
+.topRight{
+    margin:0px 0px 25px ;
+}
+
+.msgCheck{
+    border-radius: 5px;
+    max-width: 470px;
+    margin: 25px 0px;
+    align-content: left;
+}
+
+.error{
+    color:red;
+}
+
+.imgBlock{
+    max-width: 50%;
+    display: inline;
+}
+
+.textBlock{
+    max-width: 50%;
+    display: block;
+}

@@ -1,22 +1,93 @@
 <%-include("partials/header")-%>
 <div class="container">
-  <h1>Contact</h1>
+  <h1>Contact me and let me know how I can help you!</h1>
+  <h2 class="error"><%=errorInfo%></h2>
 
-  <form class="" action="/contact" method="POST">
+  <form class="form-signin" action="/contact" method="POST">
     <div class="form-group">
-      <label>Name</label>
-      <input class="form-control" type="text" name="name" />
+      <input
+        class="form-control msgContact topLeft"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Name"
+        autofocus
+        required
+      />
+      <label for="name" class="msgContact sr-only">Name</label>
 
-      <label>Subject</label>
-      <input class="form-control" type="text" name="subject" />
+      <input
+        class="form-control msgContact topRight"
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <label for="email" class="msgContact sr-only">Email</label>
 
-      <label>Body</label>
-      <textArea class="form-control" rows="5" name="body"></textArea>
+      <textArea
+        class="form-control msgContent"
+        rows="5"
+        name="body"
+        id="body"
+        placeholder="What can Logan help you with?"
+      ></textArea>
+      <label for="body" class="msgContent sr-only"
+        >What can Logan help you with?</label
+      >
+
+      <input
+        class="form-control msgCheck topRight"
+        type="text"
+        name="mathCheck"
+        id="mathCheck"
+        placeholder="What is <%=randVals.randOne%>+<%=randVals.randTwo%>"
+        required
+      />
+      <label for="mathCheck" class="msgCheck sr-only"
+        >What is <%=randVals.randOne%>+<%=randVals.randTwo%></label
+      >
+      <input
+        type="hidden"
+        id="randOne"
+        name="randOne"
+        value=<%=randVals.randOne%>
+      />
+      <input
+        type="hidden"
+        id="randTwo"
+        name="randTwo"
+        value=<%=randVals.randTwo%>
+      />
     </div>
-    <button type="submit" class="btn btn-primary" name="emailMe">
-      Send Email
-    </button>
+
+    <div class="form-submit">
+      <button type="submit" class="btn btn-primary" name="emailMe">
+        Send Message
+      </button>
+    </div>
   </form>
 </div>
 
 <%-include("partials/footer")-%>
+
+<!--
+
+        <form class="form-signin" action="/" method="POST">
+        <img class="mb-4" src="images/sword.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Sign up to my Newsletter!</h1>
+
+        <input type="text" name="fName" id="inputFirstName" class="form-control top" placeholder="First Name" required autofocus>
+        <label for="inputFirstName" class="sr-only">First Name</label>
+
+        <input type="text" name="lName" id="inputLastName" class="form-control middle" placeholder="Last Name" required>
+        <label for="inputLastName" class="sr-only">Last Name</label>
+        
+        <input type="email" name="email" id="inputEmail" class="form-control bottom" placeholder="Email address" required>
+        <label for="inputEmail" class="sr-only">Email address</label>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign me up!</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Logan Preston</p>
+    </form>
+-->
