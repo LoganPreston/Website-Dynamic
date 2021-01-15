@@ -1,20 +1,70 @@
 <%- include('partials/header')-%>
+<h1>Hello!</h1>
+<hr class="hidden" />
 <div class="container">
-  <h1>Hello!</h1>
-  <h2>I'm Logan Preston, a freelance developer.</h2>
-  <div class="textAndImageBlock">
+  <h2 class="section-header">I'm Logan Preston, a freelance developer</h2>
+  <hr />
+  <div class="row">
+    <div class="col-md">
       <p class="textBlock">
-          I'm a developer with experience in M, C, Javascript, HTML, CSS, Java, and Python.
-          I'm eager to help people bring projects to life, front end or back end.
+        <strong>About:</strong><br />
+        I'm a developer with experience primarily in Healthcare.
+        I enjoy quality development and continually learning new skills. 
+        I'm eager to help people bring projects to life, front end or back end!
       </p>
-      <img src="" alt="" class="imgBlock">
+    </div>
+    <div class="col-md">
+        <img src="images/IMG_2298_crop.jpg" alt="Logan Preston Picture" class="profilePic">
+
+    </div>
+    <div class="col-md">
+      <p class="textBlock">
+        <strong>Location:</strong><br />Madison, Wisconsin
+      </p>
+      <img
+        src="images/Flag_of_Madison_WI.svg"
+        alt="Flag of Madison WI"
+        class="medRound"
+      />
+    </div>
   </div>
-  <div class="textAndImageBlock">
-      <img src="" alt="" class="imgBlock">
-    <p class="textBlock">
-        I'm a developer with experience in M, C, Javascript, HTML, CSS, Java, and Python.
-        I'm eager to help people bring projects to life, front end or back end.
-    </p>
 </div>
+<hr class="hidden" />
+<div class="container">
+  <h3>Skills</h2>
+  <hr />
+  <div class="row">
+      <div class="col-md">
+          <p class="skillBlock">
+            <ul class="skillList">
+                <strong>Very Comfortable</strong>
+                <li>M</li>
+                <li>C</li>
+                <li>HTML/CSS</li>
+            </ul>
+          </p>
+      </div>
+      <div class="col-md">
+        <p class="skillBlock">
+          <ul class="skillList">
+              <strong>Comfortable</strong>
+              <li>Javascript (Node, Express)</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>SQL (MSSQL, Oracle)</li>
+          </ul>
+        </p>
+    </div>
+    <div class="col-md">
+        <p class="skillBlock">
+          <ul class="skillList">
+              <strong>Familiar</strong>
+              <li>MongoDB/Mongoose</li>
+              <li>VBA</li>
+              <li>Elm</li>
+          </ul>
+        </p>
+    </div>
+  </div>
 </div>
 <%- include('partials/footer')-%>

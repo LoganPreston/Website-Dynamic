@@ -9,6 +9,10 @@ label {
   padding: 5px;
 }
 
+hr{
+    margin:10px;
+}
+
 /*top nav bar*/
 .navbar {
   padding-top: 15px;
@@ -75,6 +79,7 @@ a:focus {
   min-width: 160px;
   box-shadow: 0px 4px 8px 0px rgba(22, 22, 22, 0.25);
   border-radius: 4px;
+  text-align: left;
 }
 
 /* Change color of dropdown links on hover */
@@ -186,6 +191,50 @@ a:focus {
 }
 
 .textBlock{
-    max-width: 50%;
-    display: block;
+    position: relative;
+    top:10%;
 }
+
+.medRound{
+    width: 180px;
+    height: 120px;
+    border-radius: 5%;
+    margin:10px
+    
+}
+
+.profilePic{
+    height:225px;
+    width:225px;
+    border-radius: 50%;
+
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.skillBlock{
+    position: relative;
+    top:10%;
+    align-content: center;
+}
+
+.skillList{
+    text-align:center;
+    padding: 0px 35px;
+}
+
+.skillList li{
+    list-style-type: none;
+    margin: 0px;
+}
+
+.align-left{
+    text-align: left;
+    line-height:2em;
+}
+
+ul li::before {
+    content: "\200B";
+  }

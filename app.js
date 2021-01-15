@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const nodemailer = require(__dirname + "/sendMail.js");
 
 const app = express();
 
@@ -12,17 +13,22 @@ function randOneToTen() {
   return Math.floor(Math.random() * 10 + 1);
 }
 
-function isValid(numOne,numTwo,check,email){
-    if(numOne + numTwo !== check){
-        return false;
-    }
+function isValid(numOne, numTwo, check, email) {
+  if (numOne + numTwo !== check) {
+    return false;
+  }
 
-    return true;
+  return true;
 }
 
 app.get("/", function (req, res) {
   const currentYear = new Date().getFullYear();
   res.render("home", { year: currentYear });
+});
+
+app.get("/about", function (req, res) {
+  const currentYear = new Date().getFullYear();
+  res.render("about", { year: currentYear });
 });
 
 app.get("/contact", function (req, res) {
@@ -38,19 +44,18 @@ app.get("/contact", function (req, res) {
 
 app.get("/thankYou", function (req, res) {
   const currentYear = new Date().getFullYear();
-
   res.render("thankYou", { year: currentYear });
 });
 
 app.post("/contact", function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   //get the numbers and sanitize them
   let numberOne = Math.floor(req.body.randOne);
   let numberTwo = Math.floor(req.body.randTwo);
   let mathCheck = parseInt(req.body.mathCheck);
 
   //make sure the data sent over is accurate, if not, push back to contact page with error msg
-  if (!isValid(numberOne,numberTwo,mathCheck,req.body.email)) {
+  if (!isValid(numberOne, numberTwo, mathCheck, req.body.email)) {
     const currentYear = new Date().getFullYear();
     let rand1 = randOneToTen();
     let rand2 = randOneToTen();
@@ -59,10 +64,19 @@ app.post("/contact", function (req, res) {
       errorInfo: "There was an error with your last request, please try again",
       randVals: { randOne: rand1, randTwo: rand2 },
     });
-  } 
+  }
   //if the math check works, do something with info then send to thank you page
   else {
-    
+    let emailInfo = {
+      name: req.body.name,
+      email: req.body.email,
+      body: req.body.body,
+    };
+    nodemailer.sendMail(emailInfo, function (err, msg) {
+      if(err){
+          console.log(err);
+      }
+    });
     res.redirect("/thankYou");
   }
 });
