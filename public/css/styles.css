@@ -1,6 +1,12 @@
+:root{
+  --mainColor: #005874;/* #206a5d;*/
+  --secondaryColor: #ffbe00;/*#81b214;*/
+  --accentColor: #1c819e; /* #bfdcae;*/
+  --bkgColor:#e6e6d4; /* #f1f1e8;*/
+}
 /*off white background and off-black base text*/
 body {
-  background-color: #f1f1e8;
+  background-color: var(--bkgColor);
   color: #444444;
   text-align: center;
 }
@@ -36,46 +42,48 @@ hr{
 
 /*nav bar hyperlink coloring*/
 .nav-item a {
-  color: #206a5d;
+  color: var(--mainColor);
 }
 
 /*nav bar hyperlink coloring*/
 a {
-  color: #206a5d;
+  color: var(--mainColor);
 }
 
 /*hover over hyperlinks, navbar and footer*/
 a:hover,
 a:focus {
-  color: #bfdcae;
+  color: var(--accentColor);
 }
 
 /*dropdown button default*/
 .btn-dropdown {
-  color: #206a5d;
+  color: var(--mainColor);
   border: none;
   padding: 0px;
   cursor: pointer;
+  background-color: var(--bkgColor);
 }
 
 /*dropdown button when hover, make look like other hyperlinks*/
 .btn-dropdown:hover,
 .btn-dropdown:focus {
   text-decoration: underline;
-  color: #bfdcae;
+  color: var(--accentColor);
 }
 
 /*  position dropdown li content */
 .dropdown {
   position: relative;
   display: inline-block;
+  background-color: var(--bkgColor);
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1e8;
+  background-color: var(--bkgColor);
   min-width: 160px;
   box-shadow: 0px 4px 8px 0px rgba(22, 22, 22, 0.25);
   border-radius: 4px;
@@ -84,7 +92,7 @@ a:focus {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  color: #bfdcae;
+  color: var(--accentColor);
   text-decoration: underline;
   border-radius: 4px;
 }
@@ -101,9 +109,9 @@ a:focus {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #206a5d;
+  background-color: var(--mainColor);
   padding: 0px 25px;
-  color: #f1f1e8;
+  color: var(--bkgColor);
 }
 
 .footer-padding {
@@ -112,7 +120,7 @@ a:focus {
 
 /*hyperlink coloring in the footer, inverse of top*/
 .footer a {
-  color: #f1f1e8;
+  color: var(--bkgColor);
   padding: 0px 25px;
 }
 
@@ -124,13 +132,13 @@ a:focus {
 
 /*general button - override bootstrap default color scheme*/
 .btn {
-  background-color: #206a5d;
+  background-color: var(--mainColor);
 }
 
 /*hovering on button*/
 .btn:hover,
 .btn:focus {
-  background-color: #bfdcae;
+  background-color: var(--accentColor);
   color: #222222;
 }
 
